@@ -3,8 +3,10 @@
  * Footer
  */
 ?>
+
  </div> <?php // close tag of #root ?>
 
+<?php
 /**
  * Javascript Global Variables
  */
