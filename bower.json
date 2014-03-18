@@ -1,0 +1,24 @@
+{
+  "name": "plaza-blog-theme",
+  "version": "1.0.0",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "inuit-defaults": "~0.1.1",
+    "inuit-box-sizing": "~0.1.1",
+    "inuit-functions": "~0.1.1",
+    "inuit-mixins": "~0.1.1",
+    "inuit-normalize": "~0.1.0",
+    "inuit-headings": "~0.1.1",
+    "inuit-clearfix": "~0.1.0",
+    "inuit-shared": "~0.1.1",
+    "bourbon": "~3.1.8",
+    "neat": "~1.5.0",
+    "inuit-spacing": "~0.1.2",
+    "jquery": "1.11.0",
+    "modernizr-shim": "~0.0.1"
+  },
+  "devDependencies": {}
+}
