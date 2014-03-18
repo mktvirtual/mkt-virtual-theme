@@ -19,7 +19,7 @@
   $default_stylesheets = array(
     'css/page.defaults.css'
   );
-  populate_array($css, $default_stylesheets;
+  populate_array($css, $default_stylesheets);
 
   get_stylesheets();
   wp_head();
