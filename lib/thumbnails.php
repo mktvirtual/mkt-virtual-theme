@@ -1,7 +1,6 @@
 <?php
-if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' );
 if ( function_exists( 'add_image_size' ) ) {
-  add_image_size('post', 630, true);
+      add_image_size('post', 630, true);
 }
 
 update_option('thumbnail_size_w', 150);
