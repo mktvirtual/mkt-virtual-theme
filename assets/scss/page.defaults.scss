@@ -10,7 +10,11 @@
     #PROJECT-SETTINGS
 \*------------------------------------*/
 
+@import "settings.defaults";
 @import "settings.grid";
+
+
+
 
 
 
@@ -39,7 +43,7 @@
 @import "inuitcss-old/objects.smallprint";
 
 // Bourbon for project mixins
-@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/bourbon/dist/bourbon";
 
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 @import "../bower_components/neat/app/assets/stylesheets/neat-helpers";

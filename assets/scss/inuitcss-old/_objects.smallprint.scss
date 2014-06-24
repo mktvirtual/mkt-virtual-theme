@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    $SMALLPRINT
+\*------------------------------------*/
+
+/**
+ * A series of classes for setting tiny type; for use in smallprint etc.
+ */
+.smallprint,
+.milli{
+    @include inuit-font-size($milli-size);
+}
+.micro{
+    @include inuit-font-size($micro-size);
+}
