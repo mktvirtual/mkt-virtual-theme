@@ -115,6 +115,14 @@ module.exports = function(grunt) {
         }
     };
 
+    // Autoprefixer -------------------
+    tasks.autoprefixer = {
+        options: {
+            map: true
+            browsers: ['last 2 versions', 'ie 8', 'ie 9']
+        }
+    };
+
     // configures grunt
     grunt.initConfig(tasks);
 
@@ -124,6 +132,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', [
         'sass',
+        'autoprefixer',
         'imagemin'
     ]);
 
