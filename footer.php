@@ -24,11 +24,9 @@
  * Browser sync
  */
 if($_SERVER['SERVER_PORT'] == '8888'){
-	$ifconfig = shell_exec('ifconfig');
-	preg_match('/(inet\s(\d{3}\.\d{3}\.\d.*\.(\d{2}))\snetmask)/', $ifconfig, $matches);
-	$serverIP = $matches[2];
-	echo "<script src='http://$serverIP:3000/socket.io/socket.io.js'></script>";
-	echo "<script src='http://$serverIP:3001/browser-sync-client.min.js'></script>";
+	echo '<script type=\'text/javascript\'>//<![CDATA[
+;document.write("<script async src=\'//HOST:3000/browser-sync-client.1.1.0.js\'><\/script>".replace(/HOST/g, location.hostname));
+//]]></script>';
 }
 
 /**
