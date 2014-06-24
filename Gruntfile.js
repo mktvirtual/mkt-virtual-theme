@@ -118,7 +118,7 @@ module.exports = function(grunt) {
     // Autoprefixer -------------------
     tasks.autoprefixer = {
         options: {
-            map: true
+            map: true,
             browsers: ['last 2 versions', 'ie 8', 'ie 9']
         }
     };
