@@ -9,3 +9,7 @@
 .DS_Store?
 ehthumbs.db
 Thumbs.db
+
+# Ignore package managed files
+node_modules
+bower_components
