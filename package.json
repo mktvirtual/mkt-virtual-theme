@@ -21,6 +21,9 @@
       "email": "renato.galvao[at]mktvirtual.com.br"
     }
   ],
+  "scripts": {
+    "postinstall": "bower install"
+  },
   "dependencies": {},
   "devDependencies": {
     "time-grunt": "~0.3.2",
