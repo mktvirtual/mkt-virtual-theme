@@ -45,7 +45,7 @@ class Mkt_Wrapping {
             self::$base = false;
         }
 
-        return new Roots_Wrapping();
+        return new Mkt_Wrapping();
     }
 }
 
