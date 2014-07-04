@@ -2,6 +2,5 @@
 /**
  * Single page
  */
-?>
 
-<h1>Single</h1>
+get_template_part('templates/content', 'single');
