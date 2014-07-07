@@ -2,6 +2,9 @@
 /**
  * Index page
  */
+
+// $css[] = 'css/index.css'
+// $js[] = 'css/index.js'
 ?>
 
 <?php get_template_part('templates/page', 'header'); ?>
