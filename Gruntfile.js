@@ -106,12 +106,7 @@ module.exports = function(grunt) {
                 dest: '<%= paths.build %>/<%= paths.img %>'
             }],
             options: {
-                optimizationLevel: 7,
-                use: [
-                    'imagemin-optipng',
-                    'imagemin-jpegtran',
-                    'imagemin-gifsicle'
-                ]
+                optimizationLevel: 7
             }
         }
     };
