@@ -2,11 +2,11 @@
 // Enable qTranslate for WordPress SEO
 
 function langs($arr){
-  $temp = '';
-  foreach ($arr as $key => $value) {
-    $temp = $temp . '<!--:' . $key . '-->' . $value . '<!--:-->';
-  }
-  _e($temp);
+    $temp = '';
+    foreach ($arr as $key => $value) {
+        $temp = $temp . '<!--:' . $key . '-->' . $value . '<!--:-->';
+    }
+    _e($temp);
 }
 
 function qtranslate_filter($text){
