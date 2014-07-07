@@ -50,7 +50,7 @@ module.exports = function(grunt) {
 
         stylesheets: {
             files: ['<%= paths.assets %>/<%= paths.scss %>/**/*.scss'],
-            tasks: ['sass']
+            tasks: ['sass', 'autoprefixer']
         }
     };
 
