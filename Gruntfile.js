@@ -115,7 +115,19 @@ module.exports = function(grunt) {
     tasks.autoprefixer = {
         options: {
             map: true,
-            browsers: ['last 2 versions', 'ie 8', 'ie 9']
+            browsers: ['last 2 versions', 'ie 8', 'ie 9', '> 1%']
+        },
+        dev: {
+            files: [{
+                expand: true,
+                cwd: '<%= paths.build %>/<%= paths.css %>/',
+                src: [
+                    '**/*.css'
+                ],
+                dest: '<%= paths.build %>/<%= paths.css %>',
+                ext: '.css',
+                extDot: 'last'
+            }]
         }
     };
 
