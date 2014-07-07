@@ -27,7 +27,7 @@ module.exports = function(grunt) {
         scss:   'scss',
         css:    'css',
         js:     'js',
-        img:    'img'
+        img:    'images'
     };
 
     /* Tasks
