@@ -1,6 +1,6 @@
 {
   "name": "mkt-virtual-theme",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dependencies": {
     "inuit-defaults": "~0.1.3",
     "inuit-box-sizing": "~0.1.1",
