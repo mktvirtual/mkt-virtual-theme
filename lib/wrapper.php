@@ -22,13 +22,13 @@ class Mkt_Wrapping {
     // Stores the base name of the template file; e.g. 'page' for 'page.php' etc.
     static $base;
 
-    public function __construct($template = 'base.php') {
+    public function __construct($template = 'layouts/default.php') {
         $this->slug = basename($template, '.php');
         $this->templates = array($template);
 
         if (self::$base) {
             $str = substr($template, 0, -4);
-            array_unshift($this->templates, sprintf($str . '-%s.php', self::$base));
+            array_unshift($this->templates, sprintf('layouts/%s.php', self::$base));
         }
     }
 
