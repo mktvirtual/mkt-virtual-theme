@@ -16,7 +16,7 @@
     global $css;
 
     $default_stylesheets = array(
-        'css/page.defaults.css'
+        'css/main.css'
     );
     populate_array($css, $default_stylesheets);
     get_stylesheets();
