@@ -1,10 +1,10 @@
 <?php
-require_once locate_template('./lib/init.php');
-require_once locate_template('./lib/cleanup.php');
-require_once locate_template('./lib/thumbnails.php');
-require_once locate_template('./lib/loader.php');
-require_once locate_template('./lib/wrapper.php');
-require_once locate_template('./lib/titles.php');
-require_once locate_template('./lib/i18n.php');
-require_once locate_template('./lib/utils.php');
+require_once locate_template('core/init.php');
+require_once locate_template('core/cleanup.php');
+require_once locate_template('core/thumbnails.php');
+require_once locate_template('core/loader.php');
+require_once locate_template('core/wrapper.php');
+require_once locate_template('core/titles.php');
+require_once locate_template('core/i18n.php');
+require_once locate_template('core/utils.php');
 ?>
