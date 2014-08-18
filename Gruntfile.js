@@ -70,7 +70,8 @@ module.exports = function(grunt) {
                 watchTask: true,
                 ghostMode: {
                     location: true
-                }
+                },
+                debugInfo: false // silence is golden.
             }
         }
     };
