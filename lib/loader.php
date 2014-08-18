@@ -1,4 +1,11 @@
 <?php
+/**
+ * Loader
+ */
+
+/**
+ * Echoes scripts defined by the view
+ */
 function get_scripts(){
     global $js;
     if (isset($js)):
@@ -9,6 +16,9 @@ function get_scripts(){
     endif;
 }
 
+/**
+ * Echoes stylesheets defined by the view
+ */
 function get_stylesheets(){
     global $css;
     if (isset($css)):

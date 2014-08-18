@@ -1,15 +1,25 @@
 <?php
-// Enable qTranslate for WordPress SEO
+/**
+ * Base Wrapper
+ */
 
-function langs($arr){
-    $temp = '';
-    foreach ($arr as $key => $value) {
-        $temp = $temp . '<!--:' . $key . '-->' . $value . '<!--:-->';
+/**
+ * Language array to qtranslate
+ *
+ * @param array $texts Texts in each language
+ */
+function mkt_i18n($texts){
+    $output = '';
+    foreach ($texts as $language => $text) {
+        $output = $output . '<!--:' . $language . '-->' . $text . '<!--:-->';
     }
-    _e($temp);
+    _e($output);
 }
 
-function qtranslate_filter($text){
+/**
+ * @param string $text Filter text using qtranslate
+ */
+function mkt_qtranslate_filter($text){
     return __($text);
 }
 add_filter('wpseo_title', 'qtranslate_filter', 10, 1);
