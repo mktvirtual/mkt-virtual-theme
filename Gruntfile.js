@@ -154,15 +154,17 @@ module.exports = function(grunt) {
     /* Group Tasks
     -----------------------------------------------------*/
 
+    grunt.registerTask('watch', [
+        'browserSync',
+        'watch'
+    ]);
+
     grunt.registerTask('build', [
         'sass',
         'autoprefixer',
         'imagemin'
     ]);
 
-    grunt.registerTask('default', [
-        'browserSync',
-        'watch'
-    ]);
+    grunt.registerTask('default', ['menu']);
 
 };
