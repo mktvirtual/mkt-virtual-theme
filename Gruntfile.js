@@ -49,7 +49,10 @@ module.exports = function(grunt) {
         },
 
         stylesheets: {
-            files: ['<%= paths.assets %>/<%= paths.scss %>/**/*.scss'],
+            files: [
+                '<%= paths.assets %>/<%= paths.scss %>/**/*.{scss,sass}',
+                '<%= paths.assets %>/<%= paths.sass %>/**/*.{scss,sass}',
+            ],
             tasks: ['sass', 'autoprefixer']
         }
     };
@@ -79,16 +82,28 @@ module.exports = function(grunt) {
     // Sass ---------------------------
     tasks.sass = {
         dev: {
-            files: [{
-                expand: true,
-                cwd: '<%= paths.assets %>/<%= paths.scss %>/',
-                src: [
-                    '**/*.scss'
-                ],
-                dest: '<%= paths.build %>/<%= paths.css %>',
-                ext: '.css',
-                extDot: 'last'
-            }],
+            files: [
+                {
+                    expand: true,
+                    cwd: '<%= paths.assets %>/<%= paths.scss %>/',
+                    src: [
+                        '**/*.scss'
+                    ],
+                    dest: '<%= paths.build %>/<%= paths.css %>',
+                    ext: '.css',
+                    extDot: 'last'
+                },
+                {
+                    expand: true,
+                    cwd: '<%= paths.assets %>/<%= paths.sass %>/',
+                    src: [
+                        '**/*.sass'
+                    ],
+                    dest: '<%= paths.build %>/<%= paths.css %>',
+                    ext: '.css',
+                    extDot: 'last'
+                }
+            ],
             options: {
                 style: 'compressed',
                 sourcemap: true,
