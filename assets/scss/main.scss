@@ -1,0 +1,107 @@
+/*------------------------------------*\
+    #DEFAULTS
+\*------------------------------------*/
+
+/**
+ * This structure is based on the proposition at Inuitcss' getting started [1]
+ *
+ * [1]: https://github.com/inuitcss/getting-started
+ */
+
+
+
+
+/*------------------------------------*\
+    #SETTINGS
+\*------------------------------------*/
+
+@import "settings.defaults";
+@import "settings.grid";
+@import "settings.colors";
+@import "../bower_components/inuit-defaults/settings.defaults";
+
+
+
+
+
+/*------------------------------------*\
+    #TOOLS
+\*------------------------------------*/
+
+@import "../bower_components/inuit-functions/tools.functions";
+@import "../bower_components/inuit-mixins/tools.mixins";
+
+// @import "tools.mixins";
+
+@import "../bower_components/bourbon/dist/bourbon";
+
+@import "../bower_components/neat/app/assets/stylesheets/neat";
+@import "../bower_components/neat/app/assets/stylesheets/neat-helpers";
+
+
+
+
+
+/*------------------------------------*\
+    #GENERIC
+\*------------------------------------*/
+
+@import "../bower_components/inuit-normalize/generic.normalize";
+@import "../bower_components/inuit-box-sizing/generic.box-sizing";
+@import "../bower_components/inuit-shared/generic.shared";
+
+
+
+
+
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+
+@import "../bower_components/inuit-page/base.page";
+@import "../bower_components/inuit-headings/base.headings";
+
+// @import "base.links";
+// @import "base.quotes";
+
+
+
+
+
+/*------------------------------------*\
+    #OBJECTS
+\*------------------------------------*/
+
+@import "../bower_components/inuit-media/objects.media";
+@import "inuitcss-old/objects.nav";
+@import "inuitcss-old/objects.smallprint";
+
+@import "../bower_components/inuit-media/objects.media";
+@import "../bower_components/inuit-buttons/objects.buttons";
+
+// @import "objects.buttons";
+
+
+
+
+
+/*------------------------------------*\
+    #COMPONENTS
+\*------------------------------------*/
+
+// @import "components.page-head";
+// @import "components.page-foot";
+// @import "components.site-nav";
+// @import "components.ads";
+// @import "components.promo";
+
+
+
+
+
+/*------------------------------------*\
+    #TRUMPS
+\*------------------------------------*/
+
+@import "../bower_components/inuit-spacing/trumps.spacing";
+@import "../bower_components/inuit-clearfix/trumps.clearfix";
