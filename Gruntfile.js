@@ -11,6 +11,7 @@ module.exports = function(grunt) {
 
     // default config
     var config = {
+        sourcemap: false,
         compass: false
     };
 
@@ -106,7 +107,7 @@ module.exports = function(grunt) {
             ],
             options: {
                 style: 'compressed',
-                sourcemap: true,
+                sourcemap: config.sourcemap,
                 compass: config.compass
             }
         }
