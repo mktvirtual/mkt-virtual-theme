@@ -15,10 +15,11 @@
     "neat": "~1.5.0",
     "inuit-page": "~0.2.1",
     "inuit-media": "~0.4.1",
-    "inuit-buttons": "~0.4.1"
+    "inuit-buttons": "~0.4.1",
+    "inuit-extension-wordpress": "~0.1.0"
   },
   "devDependencies": {},
   "resolutions": {
-    "inuit-defaults": "~0.2.0"
+    "inuit-defaults": "~0.2.1"
   }
 }
