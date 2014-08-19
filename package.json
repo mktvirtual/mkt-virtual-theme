@@ -34,8 +34,7 @@
     "grunt-contrib-imagemin": "~0.7.1",
     "grunt-browser-sync": "~1.1.0",
     "lodash": "~2.4.1",
-    "grunt-autoprefixer": "~0.7.6",
-    "grunt-menu": "~0.2.1"
+    "grunt-autoprefixer": "~0.7.6"
   },
   "license": "MIT",
   "engines": {
