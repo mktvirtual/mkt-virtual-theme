@@ -22,7 +22,7 @@ function mkt_i18n($texts){
 function mkt_qtranslate_filter($text){
     return __($text);
 }
-add_filter('wpseo_title', 'qtranslate_filter', 10, 1);
-add_filter('wpseo_metadesc', 'qtranslate_filter', 10, 1);
-add_filter('wpseo_metakey', 'qtranslate_filter', 10, 1);
-add_filter('wpseo_opengraph_title', 'qtranslate_filter', 10, 1);
+add_filter('wpseo_title', 'mkt_qtranslate_filter', 10, 1);
+add_filter('wpseo_metadesc', 'mkt_qtranslate_filter', 10, 1);
+add_filter('wpseo_metakey', 'mkt_qtranslate_filter', 10, 1);
+add_filter('wpseo_opengraph_title', 'mkt_qtranslate_filter', 10, 1);
