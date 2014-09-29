@@ -9,6 +9,10 @@
  * @param any $value Value to be debugged
  */
 function debug($value) {
+    if (!WP_DEBUG) {
+        return;
+    }
+
     echo '<pre class="debug">';
     var_dump($value);
     echo '</pre>';
@@ -18,6 +22,10 @@ function debug($value) {
  * Debugs WordPress global $wp_query
  */
 function debug_query() {
+    if (!WP_DEBUG) {
+        return;
+    }
+
     global $wp_query;
     debug($wp_query);
 }
