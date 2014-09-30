@@ -3,7 +3,8 @@
 \*------------------------------------*/
 
 /**
- * This structure is based on the proposition at Inuitcss' getting started [1]
+ * This structure is based on the proposition at Inuitcss' getting started [1].
+ * Please read it all once and keep refering to it.
  *
  * [1]: https://github.com/inuitcss/getting-started
  */
@@ -14,6 +15,10 @@
 /*------------------------------------*\
     #SETTINGS
 \*------------------------------------*/
+
+/**
+ * Global variables, site-wide settings, config switches, etc.
+ */
 
 @import "settings.defaults";
 @import "settings.grid";
@@ -27,6 +32,10 @@
 /*------------------------------------*\
     #TOOLS
 \*------------------------------------*/
+
+/**
+ * Site-wide mixins and functions.
+ */
 
 @import "../bower_components/inuit-functions/tools.functions";
 @import "../bower_components/inuit-mixins/tools.mixins";
@@ -46,6 +55,10 @@
     #GENERIC
 \*------------------------------------*/
 
+/**
+ * Low-specificity, far-reaching rulesets (e.g. resets).
+ */
+
 @import "../bower_components/inuit-normalize/generic.normalize";
 @import "../bower_components/inuit-box-sizing/generic.box-sizing";
 @import "../bower_components/inuit-shared/generic.shared";
@@ -57,6 +70,10 @@
 /*------------------------------------*\
     #BASE
 \*------------------------------------*/
+
+/**
+ * Unclassed HTML elements (e.g. a {}, blockquote {}, address {}).
+ */
 
 @import "../bower_components/inuit-page/base.page";
 @import "../bower_components/inuit-headings/base.headings";
@@ -71,6 +88,10 @@
 /*------------------------------------*\
     #OBJECTS
 \*------------------------------------*/
+
+/**
+ * Objects, abstractions, and design patterns (e.g. .media {}).
+ */
 
 @import "../bower_components/inuit-media/objects.media";
 @import "inuitcss-old/objects.nav";
@@ -89,6 +110,10 @@
     #COMPONENTS
 \*------------------------------------*/
 
+/**
+ * Discrete, complete chunks of UI (e.g. .carousel {}). This is the one layer that inuitcss doesn’t get involved with.
+ */
+
 // @import "components.page-head";
 // @import "components.page-foot";
 // @import "components.site-nav";
@@ -102,6 +127,10 @@
 /*------------------------------------*\
     #TRUMPS
 \*------------------------------------*/
+
+/**
+ * High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}).
+ */
 
 @import "../bower_components/inuit-extension-wordpress/trumps.wordpress";
 @import "../bower_components/inuit-spacing/trumps.spacing";
