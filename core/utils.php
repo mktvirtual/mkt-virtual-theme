@@ -51,3 +51,30 @@ function populate_array(&$target, $values, $beginning = false) {
         }
     }
 }
+
+/**
+ * Truncate text, keeping words and adding elipisis
+ *
+ * @param string $text The text to be truncated
+ * @param int $length Text max characters
+ * @param bool $words Keep full words
+ * @return string $text
+ */
+
+function mkt_truncate($text, $length, $words = true) {
+    if (strlen($text) > $length) {
+
+        // truncate text and remove any tags and shortcodes
+        $text = substr(wp_strip_all_tags($text), 0, $length);
+
+        // keep full words
+        if ($words) {
+            $text = substr($text, 0, strripos($text, " "));
+        }
+
+        // add elipsis
+        $text .= "…";
+    }
+
+    return $text;
+}
