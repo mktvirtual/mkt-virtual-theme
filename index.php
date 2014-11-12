@@ -5,6 +5,7 @@
 
 // $css[] = 'css/index.css'
 // $js[] = 'css/index.js'
+// $layout = 'blue';
 ?>
 
 <?php get_template_part('templates/page', 'header'); ?>
