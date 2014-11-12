@@ -4,4 +4,4 @@
  */
 ?>
 
-<?php get_template_part('templates/content', 'single'); ?>
+<?php the_component('componets/content-single'); ?>

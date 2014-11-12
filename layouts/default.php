@@ -3,12 +3,12 @@
  * Base Wrapper
  */
 
-get_template_part('templates/head');
+the_component('components/head');
 ?>
 <body <?php body_class() ?>>
     <?php
         do_action('get_header');
-        get_template_part('templates/header');
+        the_component('components/header');
     ?>
 
     <div class="container" id="container" role="document">
@@ -17,6 +17,6 @@ get_template_part('templates/head');
         </main>
     </div>
 
-    <?php get_template_part('templates/footer'); ?>
+    <?php the_component('templates/footer'); ?>
 </body>
 </html><?php // closes <html> from templates/head ?>

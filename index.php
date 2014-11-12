@@ -8,7 +8,7 @@
 // $layout = 'blue';
 ?>
 
-<?php get_template_part('templates/page', 'header'); ?>
+<?php the_component('components/page-header'); ?>
 
 <?php if (!have_posts()) { ?>
     <div class="alert alert--warning">
@@ -17,7 +17,7 @@
 <?php } ?>
 
 <?php while (have_posts()) { the_post(); ?>
-    <?php get_template_part('templates/content', get_post_format()); ?>
+    <?php the_component('component/content'); ?>
 <?php } ?>
 
-<?php get_template_part('templates/pagination'); ?>
+<?php the_component('component/pagination'); ?>

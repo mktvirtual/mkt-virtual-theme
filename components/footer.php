@@ -6,13 +6,13 @@
 
 <footer class="footer" role="contentinfo">
     <div class="container">
-        <?php get_template_part('templates/copyrights'); ?>
+        <?php the_component('components/copyrights'); ?>
     </div>
 </footer>
 
 <?php
-get_template_part('templates/javascript-globals');
-get_template_part('templates/browser-sync');
+the_component('components/javascript-globals');
+the_component('components/browser-sync');
 
 /**
  * Default scripts of the webpage

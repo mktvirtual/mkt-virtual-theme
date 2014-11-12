@@ -4,5 +4,5 @@
  */
 ?>
 
-<?php get_template_part('templates/page', 'header'); ?>
-<?php get_template_part('templates/content', 'page'); ?>
+<?php the_component('components/page-header'); ?>
+<?php the_component('components/content-page'); ?>
