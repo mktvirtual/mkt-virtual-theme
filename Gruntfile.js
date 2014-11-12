@@ -29,6 +29,7 @@ module.exports = function(grunt) {
         css:    'css',
         js:     'js',
         img:    'images',
+        icons:  'icons',
         fonts:  'fonts'
     };
 
@@ -148,6 +149,24 @@ module.exports = function(grunt) {
         }
     };
 
+    // Webfont ------------------------
+    tasks.webfont = {
+        icons: {
+            src: '<%= paths.assets %>/<%= paths.icons %>/**/*.svg',
+            dest: '<%= paths.build %>/<%= paths.fonts %>',
+            destCss: '<%= paths.assets %>/<%= paths.scss %>',
+            syntax: 'bem',
+            options: {
+                stylesheet: 'scss',
+                engine: 'node',
+                templateOptions: {
+                    classPrefix: 'icon--',
+                },
+                htmlDemo: false
+            }
+        }
+    };
+
     // configures grunt
     grunt.initConfig(tasks);
 
@@ -161,6 +180,7 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('build', [
+        'webfont',
         'sass',
         'autoprefixer',
         'imagemin'
