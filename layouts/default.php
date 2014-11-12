@@ -17,6 +17,6 @@ the_component('components/head');
         </main>
     </div>
 
-    <?php the_component('templates/footer'); ?>
+    <?php the_component('components/footer'); ?>
 </body>
-</html><?php // closes <html> from templates/head ?>
+</html><?php // closes <html> from components/head ?>

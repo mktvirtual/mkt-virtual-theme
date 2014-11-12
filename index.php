@@ -17,7 +17,7 @@
 <?php } ?>
 
 <?php while (have_posts()) { the_post(); ?>
-    <?php the_component('component/content'); ?>
+    <?php the_component('components/content'); ?>
 <?php } ?>
 
-<?php the_component('component/pagination'); ?>
+<?php the_component('components/pagination'); ?>
