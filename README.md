@@ -1,23 +1,23 @@
-# Mkt Virtual Theme
-> Fast initial WordPress Theme development
+# mkt-virtual-theme
+> Tema para desenvolvimento modular no WordPress
 
-# Installing
+# Instalação
 
-The fastest way to install the Mkt Virtual Theme is by using [Yeopress](https://github.com/wesleytodd/YeoPress), an [Yeoman](http://yeoman.io/) generator for WordPress.
+A forma mais rápida de instalar o mkt-virtual-theme é usando o [Yeopress](https://github.com/wesleytodd/YeoPress), um gerador do [Yeoman](http://yeoman.io/) para WordPress.
 
-To install Yeoman and Yeopress, run:
+Para instalar o Yeoman e o Yeopress, execute:
 
 ```bash
 npm install --global yo generator-wordpress
 ```
 
-To generate your WordPress website with Mkt Virtual Theme, execute this inside the project folder:
+Para gerar seu site WordPress utilizando o mkt-virtua-theme, execute este comando dentro da pasta do seu projeto:
 
 ```bash
 yo wordpress
 ```
 
-Optionally you can use an `~/.yeopress` file to override Yeopress defaults. I recommend [this one](https://gist.github.com/hugobessaa/d16240c1a0b175de1ef8 "recommended .yeopress configuration file to be used with the Mkt Virtual Theme") when using the Mkt Virtual Theme.
+Opcionalmente, você pode usar um arquivo `~.yeopress` para sobrescrever as configurações padrão. Eu recomendo [este aqui](https://gist.github.com/hugobessaa/d16240c1a0b175de1ef8 "recommended .yeopress configuration file to be used with the Mkt Virtual Theme") para instalar o mkt-virtual-theme.
 
-# License
+# Licença
 [MIT license](http://www.opensource.org/licenses/mit-license.php).
