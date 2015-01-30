@@ -149,6 +149,15 @@ module.exports = function(grunt) {
         }
     };
 
+    // Sprites || https://github.com/Ensighten/grunt-spritesmith
+    tasks.sprite = {
+        all: {
+            src: '<%= paths.assets %>/<%= paths.img %>/sprites/*.png',
+            dest: '<%= paths.assets %>/<%= paths.img %>/sprites.png',
+            destCss: '<%= paths.assets %>/<%= paths.css %>/sprites.css'
+        }
+    };
+
     // Webfont ------------------------
     tasks.webfont = {
         icons: {
