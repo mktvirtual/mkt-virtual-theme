@@ -60,7 +60,6 @@ module.exports = function(grunt) {
     };
 
     // BrowserSync --------------------
-    // [TODO]: configure proxy option
     tasks.browserSync = {
         dev: {
             bsFiles: {
@@ -72,7 +71,11 @@ module.exports = function(grunt) {
                 ]
             },
             options: {
+                proxy: 'http://localhost:8888/',
+                tunnel: grunt.option('tunnel') || grunt.option('public') || false,
                 watchTask: true,
+                logSnippet: false,
+                open: false,
                 ghostMode: {
                     location: true
                 },
