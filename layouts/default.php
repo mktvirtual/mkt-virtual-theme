@@ -2,7 +2,7 @@
 /**
  * Base Wrapper
  */
-
+wp_reset_query();
 the_component('components/head');
 ?>
 <body <?php body_class() ?>>
