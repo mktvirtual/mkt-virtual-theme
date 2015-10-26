@@ -19,5 +19,5 @@ register_nav_menu('main-menu', 'Menu Principal');
  * Path constants
  */
 define('PATH_TEMPLATE', get_bloginfo('template_directory'));
-define('PATH_IMAGES', get_bloginfo('template_directory') . '/assets/images');
+define('PATH_IMAGES', get_bloginfo('template_directory') . '/assets/img');
 define('PATH_URL', get_bloginfo('url'));

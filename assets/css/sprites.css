@@ -1,0 +1,60 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+.icon-arrow-left {
+  background-image: url(../img/sprites.png);
+  background-position: -190px 0px;
+  width: 56px;
+  height: 53px;
+}
+.icon-arrow-right {
+  background-image: url(../img/sprites.png);
+  background-position: -190px -53px;
+  width: 56px;
+  height: 53px;
+}
+.icon-ico-hands {
+  background-image: url(../img/sprites.png);
+  background-position: -190px -106px;
+  width: 45px;
+  height: 39px;
+}
+.icon-ico-pencil {
+  background-image: url(../img/sprites.png);
+  background-position: -190px -145px;
+  width: 31px;
+  height: 38px;
+}
+.icon-ico-search {
+  background-image: url(../img/sprites.png);
+  background-position: -221px -145px;
+  width: 20px;
+  height: 21px;
+}
+.icon-ico-talk {
+  background-image: url(../img/sprites.png);
+  background-position: -190px -183px;
+  width: 36px;
+  height: 29px;
+}
+.icon-linkedin {
+  background-image: url(../img/sprites.png);
+  background-position: -190px -212px;
+  width: 27px;
+  height: 27px;
+}
+.icon-pnl {
+  background-image: url(../img/sprites.png);
+  background-position: 0px 0px;
+  width: 190px;
+  height: 239px;
+}
+/*# sourceMappingURL=sprites.css.map */

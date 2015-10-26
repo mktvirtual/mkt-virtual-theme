@@ -7,9 +7,6 @@
 // $js[] = 'css/index.js'
 // $layout = 'blue';
 ?>
-
-<?php the_component('components/page-header'); ?>
-
 <?php if (!have_posts()) { ?>
     <div class="alert alert--warning">
         <?php _e('Desculpe, nenhum resultado foi encontrado.'); ?>

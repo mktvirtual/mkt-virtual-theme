@@ -5,8 +5,14 @@
 ?>
 
 <header class="header" role="banner">
-    <div class="container">
-        <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>
+    <div class="container" itemscope itemtype="http://schema.org/ImageObject">
+        <?php if (is_front_page()): ?>
+            <span class="logo">
+                <img itemprop="contentUrl" itemprop="image" src="<?php bloginfo('template_directory'); ?>/assets/img/isabel-soares.png" alt="Isabel Soares - Desenvolvimento Humano e Organizacional">
+            </span>
+        <?php else: ?>
+            <a class="logo" rel="Index" href="<?php bloginfo('url'); ?>"><img itemprop="contentUrl" itemprop="image" src="<?php bloginfo('template_directory'); ?>/assets/img/isabel-soares.png" alt="Isabel Soares - Desenvolvimento Humano e Organizacional"></a>
+        <?php endif ?>
 
         <nav class="header__nav" role="navigation">
             <?php
@@ -17,3 +23,4 @@
         </nav>
     </div>
 </header>
+<div class="sticky-header"></div>

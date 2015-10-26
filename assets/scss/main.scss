@@ -1,137 +1,417 @@
-/*------------------------------------*\
-    #DEFAULTS
-\*------------------------------------*/
+@import "theme";
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 
-/**
- * This structure is based on the proposition at Inuitcss' getting started [1].
- * Please read it all once and keep refering to it.
- *
- * [1]: https://github.com/inuitcss/getting-started
- */
-
-
-
-
-/*------------------------------------*\
-    #SETTINGS
-\*------------------------------------*/
-
-/**
- * Global variables, site-wide settings, config switches, etc.
- */
-
-@import "settings.defaults";
-@import "settings.grid";
-@import "settings.colors";
-@import "../bower_components/inuit-defaults/settings.defaults";
-
-
-
-
-
-/*------------------------------------*\
-    #TOOLS
-\*------------------------------------*/
-
-/**
- * Site-wide mixins and functions.
- */
-
-@import "../bower_components/inuit-functions/tools.functions";
-@import "../bower_components/inuit-mixins/tools.mixins";
-
-// @import "tools.mixins";
-
-@import "../bower_components/bourbon/dist/bourbon";
-
+$grid-columns: 12 !default;
+$max-width: em(940) !default;
 @import "../bower_components/neat/app/assets/stylesheets/neat";
+
 @import "../bower_components/neat/app/assets/stylesheets/neat-helpers";
 
 
+$mobile: new-breakpoint(max-width 480px 4);
+$tablet: new-breakpoint(max-width 960px 8);
+
+$base-font-size: 18px;
+
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+@mixin space-bottom{
+    margin-bottom: em(50px);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+ul{
+  padding: 0;
+  list-style-position: inside;
+  margin: 0;
+}
+
+.box-shadow{
+  box-shadow: 2px 3px 7px rgba(0, 0, 0, .2);
+}
+.centered{
+  text-align: center;
+}
+html, body{
+  font-family: 'Droid Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+	background: #f6f6f6;
+	img{
+	    max-width: 100%;
+	    height: auto;
+	}
+	figure{
+		padding: 0;
+		margin: 0;
+	}
+}
+
+a{
+  text-decoration: none;
+}
+i{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.serif{
+  font-family: 'Droid Serif', serif;
+}
 
 
+.hide{
+	display: none;
+}
+.root{
+  overflow: hidden;
+  width: 100%;
+}
+.container{
+    @include outer-container;
+    }
+.box-white{
+    background: white;
+}
+.expand-bottom{
+    margin-bottom: em(45px);
+  }
+.sticky-header{
+    min-height: 93px;
+    }
 
-/*------------------------------------*\
-    #GENERIC
-\*------------------------------------*/
+.overflow{
+  overflow: hidden;
+}
+.header{
+    min-height: 93px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 500;
+    font-size: 16px;
+    background: white;
+    &.fixed{
+        position: fixed;
+        min-height: 0;
+        background: rgba(255,255,255,0.95);
+        border-bottom: solid 1px #F0F0F0;
+        .logo{
+            @include span-columns(2 of 12);
+            padding: 4px 0 2px;
+        }
+        .header__nav ul{
+            padding: 17px 0;
+            font-size: 90%;
+        }
+    }
+    .logo{
+        @include span-columns(4 of 12);
+        padding: 25px 0 0;
+        transition-property: all;
+        transition-duration: .5s;
+        img{
+            max-width: 100%;
+            }
+        }
+    .header__nav{
+        @include span-columns(8 of 12);
+        @include omega;
+        float: right;
+        ul{
+            padding: 38px 0;
+            text-align: right;
+            margin: 0;
+            }
+            li{
+                display: inline-block;
+                margin: 0 3px;
+                }
+            a{
+                color: $orange;
+                text-decoration: none;
+                padding: 2px 5px;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: 100;
+                text-transform: uppercase;
+                font-size: em(14px);
+                transition-property: all;
+                transition-duration: .5s;
+                &:hover{
+                    background: $orange;
+                    color: white;
+                    }
+                }
+        }
+        @include media($tablet){
+            .header__nav, .logo{
+                @include reset-all;
+                @include fill-parent;
+                text-align: center;
+                ul{
+                    padding: 20px 0;
+                    text-align: center;
+                }
+            }
+            .header__nav{
+                margin-bottom: 15px;
+            }
+        }
+    }
 
-/**
- * Low-specificity, far-reaching rulesets (e.g. resets).
- */
+  .slick-container{
+  	overflow: visible;
+    max-height: 413px;
+  	.slick-list{
+  		overflow: visible;
+  	}
+    .slide{
+      position: relative;
+      background: black;
+      .figure-caption{
+        position: absolute;
+        bottom: 0;
+        z-index: 5;
+        background: rgba(121, 136, 152, .85);
+        color: white;
+        width: 100%;
+        a{
+          color: white;
+          text-decoration: none;
 
-@import "../bower_components/inuit-normalize/generic.normalize";
-@import "../bower_components/inuit-box-sizing/generic.box-sizing";
-@import "../bower_components/inuit-shared/generic.shared";
+        }
+      }
+      .resize-param, .figure-caption{
+        opacity: 0.5;
+        transition-duration: .8s;
+        transition-property: all;
+        backface-visibility: hidden;
+      }
+      .figure-caption{
+        opacity: 0;
+        transition-delay: .5;
+      }
+      .figure-caption--sustent{
+        min-height: 100%;
+        background: red;
+      }
+      .post-meta{
+        @include span-columns(2 of 12);
+        text-align: center;
+        .date-circle{
+          border-radius: 50%;
+          background: white;
+          display: inline-block;
+          color: $gray;
+          padding: 20px;
+          line-height: 22px;
+          margin-top: -35px;
+        }
+        .day-month{
+          font-size: em(18px);
+        }
+        .year{
+          font-size: em(15px);
+        }
+
+      }
+      .title-meta{
+        @include span-columns(10 of 12);
+        @include omega;
+        overflow: hidden;
+        padding: 15px 10px 15px 0;
+        h1{
+          margin: 0;
+          font-size: em(27px);
+          font-weight: bold;
+        }
+        p{
+          font-size: 12px;
+          text-transform: uppercase;
+          font-size: 300;
+          margin-bottom: 0;
+        }
+      }
+      &.slick-active{
+        .figure-caption, .resize-param{
+          opacity: 1;
+        }
+      }
+      a{
+        outline: none;
+      }
+    }
+  }
 
 
+.home{
+    .main-title{
+        text-align: center;
+        font-size: 53px;
+        @extend .serif;
+        &.white{
+            color: white;
+        }
+    }
+    .solutions{
+        .cards{
+            @include span-columns(4 of 12);
+            background: white;
+            @extend .box-shadow;
+            &:last-child{
+                @include omega;
+            }
+            figure{
+                margin-bottom: 10px;
+            }
+            p{
+                padding: 15px;
+                font-size: 20px;
+                a{
+                    color: black;
+                }
+            }
+        }
+    }
+    .blog{
+        .overflow{
+            padding: 8px;
+        }
+        .post{
+            @include span-columns(6 of 12);
+            position: relative;
+            .date{
+                position: absolute;
+                top: -6px;
+                line-height: 60px;
+                left: 10px;
+                font-size: 14px;
+                z-index: 6;
+                width: 43px;
+                height: 77px;
+                color: white;
+                text-align: center;
+                background: transparent url('../img/marker.png') no-repeat center top;
+            }
+            h1{
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                margin-bottom: 0;
+                font-size: 24px;
+                background: rgba(121, 136, 152, .85);
+                padding: 15px;
+                a{
+                   color: white;
+                   font-size: 24px;
+                }
+            }
+        }
+    }
+}
 
 
+.partners{
+    background: $gray url('../img/gray-pattern.png') repeat left top;
+    padding: em(30px) 0 em(40px);
+    .partners-list{
+        padding: 0;
+        margin: 0;
+    }
+    .logo-partner{
+        @include span-columns(3 of 12);
+        @include nth-omega(4n);
+        line-height: 0;
+        margin-bottom: 20px;
+    }
+}
 
-/*------------------------------------*\
-    #BASE
-\*------------------------------------*/
+.common-page{
+  color: #222222;
+  font-size: em(18px);
+  line-height: em(34px);
+}
 
-/**
- * Unclassed HTML elements (e.g. a {}, blockquote {}, address {}).
- */
-
-@import "../bower_components/inuit-page/base.page";
-@import "../bower_components/inuit-headings/base.headings";
-
-// @import "base.links";
-// @import "base.quotes";
-
-
-
-
-
-/*------------------------------------*\
-    #OBJECTS
-\*------------------------------------*/
-
-/**
- * Objects, abstractions, and design patterns (e.g. .media {}).
- */
-
-@import "../bower_components/inuit-media/objects.media";
-@import "inuitcss-old/objects.nav";
-@import "inuitcss-old/objects.smallprint";
-
-@import "../bower_components/inuit-media/objects.media";
-@import "../bower_components/inuit-buttons/objects.buttons";
-
-// @import "objects.buttons";
+.depoiments{
+    background: #e9b025;
+    color: white;
+}
 
 
+.footer{
+  background: #525151;
+  font-size: 13px;
+  text-align: center;
+  color: white;
+  padding: 15px 10px;
+  font-family: "Ubuntu";
+  i.icon-linkedin{
+    margin-left: 8px;
+  }
+}
+
+.backgrounded-component{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000;
+    padding: 0 20px;
+    color: white;
+    font-size: em(28px);
+    @extend .serif;
+    text-align: center;
+    line-height: em(32px);
+    overflow: hidden;
+    padding: 20px 0;
+    text-shadow: -2px 3px 7px rgba(0, 0, 0, .3);
+    &.expanded{
+      margin: 40px 0 60px;
+    }
+    &.page-header{
+      h1{
+        line-height: em(24px);
+      }
+    }
+  }
 
 
+#page-treinamentos{
+  .title-internal{
+    font-size: em(24px);
+    margin-top: em(40px);
+  }
+  .bg{
+    background: $gray url('../img/treinamentos/bg.jpg') no-repeat center center;
+  }
+}
 
-/*------------------------------------*\
-    #COMPONENTS
-\*------------------------------------*/
-
-/**
- * Discrete, complete chunks of UI (e.g. .carousel {}). This is the one layer that inuitcss doesn’t get involved with.
- */
-
-// @import "components.page-head";
-// @import "components.page-foot";
-// @import "components.site-nav";
-// @import "components.ads";
-// @import "components.promo";
-
-
-
-
-
-/*------------------------------------*\
-    #TRUMPS
-\*------------------------------------*/
-
-/**
- * High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}).
- */
-
-@import "../bower_components/inuit-extension-wordpress/trumps.wordpress";
-@import "../bower_components/inuit-spacing/trumps.spacing";
-@import "../bower_components/inuit-clearfix/trumps.clearfix";
+.header{
+  border-bottom: solid 4px $orange;
+}
+#page-pnl{
+  padding: em(40px) 0 em(50px);
+  .bg{
+    background: $gray url('../img/pnl/bg-quote.jpg') no-repeat center center;
+  }
+  .title-page{
+    font-size: em(53px);
+    @extend .serif;
+    margin-bottom: 40px;
+  }
+  .descrition-page{
+    color: #6f6f6f;
+    font-size: em(24px);
+    line-height: em(26px);
+    text-align: center;
+    padding: 0 25px;
+    font-weight: 300;
+    margin-bottom: 50px;
+  }
+}

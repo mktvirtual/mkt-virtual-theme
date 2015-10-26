@@ -1,0 +1,20 @@
+$orange: #f8a624;
+$gray: #798898;
+$green: #86c0bf;
+
+.call-action{
+	margin: 30px 0;
+	text-align: center;
+}
+
+.btn{
+	color: white;
+	background: $green;
+	font-size: 24px;
+	padding: 20px 50px;
+	transition-property: all;
+	transition-duration: .1s;
+	&:hover{
+		background: darken($green, 10%);
+	}
+}
