@@ -11,7 +11,7 @@ the_component('components/head');
         the_component('components/header');
     ?>
 
-    <div class="container" id="container" role="document">
+    <div role="document" class="root">
         <main class="main" role="main">
             <?php echo $args['content']; ?>
         </main>

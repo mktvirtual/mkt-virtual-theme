@@ -19,6 +19,6 @@ update_option('large_size_h', 800);
  * Custom sizes
  */
 if (function_exists('add_image_size')) {
-    add_image_size('post', 630, true);
+    add_image_size('slideshow', 940, 413, true);
 }
 
